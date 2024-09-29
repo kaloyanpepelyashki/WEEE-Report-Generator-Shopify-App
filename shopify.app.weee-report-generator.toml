@@ -1,0 +1,28 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "387f9e662ffb11fc6df5b30887ac5cd7"
+name = "WEEE Report Generator"
+handle = "weee-report-generator-1"
+application_url = "https://api.weee-calculator.net.ohmio.net/"
+embedded = true
+
+[build]
+dev_store_url = "testdevelopmentstoreforapps.myshopify.com"
+include_config_on_deploy = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "read_products,write_products,read_orders,write_orders"
+
+[auth]
+redirect_urls = [
+  "https://api.weee-calculator.net.ohmio.net/auth/callback",
+  "https://api.weee-calculator.net.ohmio.net/auth/shopify/callback",
+  "https://api.weee-calculator.net.ohmio.net/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2024-07"
+
+[pos]
+embedded = false
